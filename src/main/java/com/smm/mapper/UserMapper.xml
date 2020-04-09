@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smm.mapper.UserMapper">
+    <resultMap id="accountMap" type="com.entity.Account">
+        <id property="accountId" column="id"></id>
+        <result property="accountUid" column="uid"></result>
+        <result property="accountMoney" column="money"></result>
+    </resultMap>
+
+    <select id="findAll" resultMap="accountMap" parameterType="tableLoginInfo">
+        select * from account where 1 = #{accountId}
+    </select>
+</mapper>

@@ -496,6 +496,10 @@ input[type="email"]:not(.browser-default).tm-input-white-bg {
   align-items: center;
   justify-content: space-between;
 }
+.not-info{
+  font-size: 20px;
+  color: red;
+}
 
 @media (max-width: 400px) {
   .tm-form-block {

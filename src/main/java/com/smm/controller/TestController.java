@@ -22,4 +22,9 @@ public class TestController {
         System.out.println("2");
         return "login";
     }
+
+    @RequestMapping("login")
+    public String dologin() {
+        return "login";
+    }
 }
