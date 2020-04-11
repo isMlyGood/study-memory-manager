@@ -19,11 +19,11 @@
         <property name="suffix" value=".html"></property>
         <property name="order" value="1"></property>
     </bean>
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/view/"></property>
-        <property name="suffix" value=".jsp"></property>
-        <property name="order" value="2"></property>
-    </bean>
+<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--        <property name="prefix" value="/WEB-INF/view/"></property>-->
+<!--        <property name="suffix" value=".jsp"></property>-->
+<!--        <property name="order" value="2"></property>-->
+<!--    </bean>-->
 
 
 
@@ -34,6 +34,7 @@
         (2)允许使用"/"做整体映射
      -->
     <mvc:default-servlet-handler/>
+<!--    <mvc:resources mapping="/WEB-INF/view/top/**" location="/WEB-INF/view/top/"/>-->
 <!--    <mvc:resources location="/js/" mapping="/js/**"></mvc:resources>-->
 <!--    <mvc:resources location="/css/" mapping="/css/**"></mvc:resources>-->
 <!--    <mvc:resources location="/img/" mapping="/img/**"></mvc:resources>-->

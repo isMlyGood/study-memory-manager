@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     </typeAliases>
 
 <!--    加载Mapper映射文件-->
-    <mappers>
-        <mapper resource=""/>
-    </mappers>
+<!--    <mappers>-->
+<!--        <mapper resource="com/smm/mapper/TestMapper.xml"/>-->
+<!--    </mappers>-->
 </configuration>
