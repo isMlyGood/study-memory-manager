@@ -1,9 +1,11 @@
 package com.smm.mapper;
 
 import com.smm.entity.Test;
+import com.smm.entity.UserInfo;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
+@Repository("testMapper")
 public interface TestMapper {
-    public List<Test> findAll();
+
+    public void saveUser(Test test);
 }

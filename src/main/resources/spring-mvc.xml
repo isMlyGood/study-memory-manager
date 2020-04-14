@@ -9,10 +9,8 @@
        https://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
 <!--    需要扫描的包路径-->
-    <context:component-scan base-package="com.smm"></context:component-scan>
-
+    <context:component-scan base-package="com.smm.controller"></context:component-scan>
     <!--    配置网络资源视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"></property>
@@ -24,11 +22,9 @@
 <!--        <property name="suffix" value=".jsp"></property>-->
 <!--        <property name="order" value="2"></property>-->
 <!--    </bean>-->
-
-
-
 <!--    开启mvc注解-->
     <mvc:annotation-driven></mvc:annotation-driven>
+
     <!-- 2.静态资源默认servlet配置
         (1)加入对静态资源的处理：js,gif,png
         (2)允许使用"/"做整体映射

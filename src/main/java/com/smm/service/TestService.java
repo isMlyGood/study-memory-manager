@@ -6,9 +6,10 @@ import java.util.List;
 
 public interface TestService {
 
+
     /**
-     * 测试业务
+     * 插入操作
      */
-    public List<Test> Testone();
+    public void saveUser(String sex,String name,int age,String email,String password,String mobile,String address);
 
 }

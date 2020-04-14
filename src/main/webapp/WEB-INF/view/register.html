@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/materialize.min.css">
     <link rel="stylesheet" href="/css/tooplate.css">
+
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/top-skip.js"></script>
+    <script src="/js/sso-user-related.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
 </head>
 
 <body id="register">
@@ -18,14 +28,14 @@
         <div class="row tm-register-row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-l">
                 <form action="" method="post">
-                    <div class="mb-2">
+                    <div class="mb-2" id="sexLable">
                         <label class="mr-4">
                             <input class="with-gap" name="title" type="radio" value="mr" />
-                            <span>男生</span>
+                            <span id="boy">男生</span>
                         </label>
                         <label class="mr-4">
                             <input class="with-gap" name="title" type="radio" value="ms" />
-                            <span>女生</span>
+                            <span id="girl">女生</span>
                         </label>
                     </div>
 
@@ -33,13 +43,13 @@
                         <input placeholder="姓名" id="first_name" name="first_name" type="text" class="validate">
                     </div>
                     <div class="input-field">
-                        <input placeholder="年龄" id="email" name="email" type="text" class="validate">
+                        <input placeholder="年龄" id="age" name="email" type="text" class="validate">
                     </div>
                     <div class="input-field">
-                        <input placeholder="电子邮箱" name="email" type="text" class="validate">
+                        <input placeholder="电子邮箱" id="email" name="email" type="text" class="validate">
                     </div>
                     <div class="input-field">
-                        <input placeholder="密码" name="email" type="password" class="validate">
+                        <input placeholder="密码" id="password" name="email" type="password" class="validate">
                     </div>
                     <div class="input-field">
                         <input placeholder="电话" id="mobile" name="mobile" type="text" class="validate">
@@ -48,7 +58,7 @@
                         <input placeholder="联系地址" id="address" name="address" type="text" class="validate">
                     </div>
                     <div class="text-right mt-4">
-                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text">提交</button>
+                        <button onclick="userRegister()" type="submit" class="waves-effect btn-large btn-large-white px-4 black-text">提交</button>
                     </div>
                 </form>
             </div>
@@ -59,19 +69,11 @@
                     <p class="grey-text">在左边栏位填入相关信息，点击提交即可！.</p>
                     <p class="not-info"><a href="javascript:void (0)" onclick="underSkipLogin()">已有账户，请登陆</a></p>
                 </header>
-
             </div>
         </div>
     </div>
 
-    <script src="/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="/js/materialize.min.js"></script>
-    <script src="/js/top-skip.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('select').formSelect();
-        });
-    </script>
+
 </body>
 
 </html>

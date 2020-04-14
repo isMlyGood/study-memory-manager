@@ -1,14 +1,16 @@
 package com.smm.entity;
 
-public class UserInfo {
+import java.io.Serializable;
+
+public class UserInfo implements Serializable {
     private int id;
     private String name;
+    private String sex;
     private int age;
     private String email;
     private String password;
     private String phone;
     private String address;
-    private String zipcode;
 
     public int getId() {
         return id;
@@ -24,6 +26,14 @@ public class UserInfo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public int getAge() {
@@ -66,25 +76,17 @@ public class UserInfo {
         this.address = address;
     }
 
-    public String getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
-    }
-
     @Override
     public String toString() {
         return "UserInfo{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
-                ", zipcode='" + zipcode + '\'' +
                 '}';
     }
 }
