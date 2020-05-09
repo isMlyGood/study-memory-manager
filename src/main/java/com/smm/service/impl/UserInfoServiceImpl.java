@@ -2,19 +2,28 @@ package com.smm.service.impl;
 
 import com.smm.entity.UserInfo;
 import com.smm.mapper.UserInfoMapper;
-import com.smm.service.TestService;
+import com.smm.service.UserInfoService;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("testService")
-public class TestServiceImpl implements TestService{
+@Service("userInfoService")
+public class UserInfoServiceImpl implements UserInfoService {
+
 
     private final UserInfoMapper userInfoMapper;
 
-    public TestServiceImpl(@Qualifier("userInfoMapper") UserInfoMapper userInfoMapper) {
+    @Autowired
+    public UserInfoServiceImpl(UserInfoMapper userInfoMapper) {
         this.userInfoMapper = userInfoMapper;
     }
+
+    public int loginUser(String username, String password) {
+
+        return 0;
+    }
+
+
 
     /**
      * 测试保存用户
@@ -26,7 +35,7 @@ public class TestServiceImpl implements TestService{
      * @param mobile
      * @param address
      */
-    public void saveUser(String sex,String name,int age,String email,String password,String mobile,String address) {
+    public void addUser(String sex, String name, int age, String email, String password, String mobile, String address) {
         UserInfo userInfo = new UserInfo();
         userInfo.setSex(sex);
         userInfo.setName(name);

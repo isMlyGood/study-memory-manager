@@ -1,6 +1,8 @@
 package com.smm.test;
 
+import com.smm.entity.LoginInfo;
 import com.smm.entity.UserInfo;
+import com.smm.mapper.LoginInfoMapper;
 import com.smm.mapper.TestMapper;
 import com.smm.mapper.UserInfoMapper;
 import org.junit.Test;
@@ -9,14 +11,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "classpath:spring-dao.xml", "classpath:spring-service.xml" , "classpath:spring-mvc.xml","classpath:mybatis-config.xml"})
+@ContextConfiguration({ "classpath:spring-dao.xml", "classpath:spring-service.xml" })
 public class BaseTest {
 
     @Autowired
     private UserInfoMapper userInfoMapper;
     @Autowired
     private TestMapper testMapper;
+    @Autowired
+    private LoginInfoMapper loginInfoMapper;
+
+    @Test
+    public void testSelectByUserNameLoginInfo() throws Exception {
+        LoginInfo loginInfo = new LoginInfo();
+        loginInfo.setName("mly@zdady.com");
+        List<LoginInfo> loginInfos = loginInfoMapper.queryUserByUsername(loginInfo);
+        System.out.println(loginInfos.toString());
+    }
 
     @Test
     public void testInsertAppointment() throws Exception {
@@ -28,7 +42,7 @@ public class BaseTest {
         userInfo.setPassword("password");
         userInfo.setPhone("mobile");
         userInfo.setAddress("address");
-        userInfoMapper.saveUser(userInfo);
+//        userInfoMapper.saveUser(userInfo);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.smm.controller;
 
-import com.smm.service.TestService;
+import com.smm.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,18 +11,29 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/user")
 public class UserController {
     @Autowired
-    private final TestService testService;
+    private UserInfoService userInfoService;
 
-    public UserController(TestService testService) {
-        this.testService = testService;
+    /**
+     * 登陆
+     */
+
+    @RequestMapping(value = "/userLogin",method = RequestMethod.POST)
+    @ResponseBody
+    public String userLogin(String username,String password){
+        System.out.println(username + password);
+        return "成功";
     }
 
-    @RequestMapping(value = "/UserRegister",method = RequestMethod.POST)
+    /**
+     * 注册
+     */
+
+
+    @RequestMapping(value = "/userRegister",method = RequestMethod.POST)
     @ResponseBody
-    public String test1(String sex,String name,int age,String email,String password,String mobile,String address){
-        System.out.println("controller");
-        testService.saveUser(sex,name,age,email,password,mobile,address);
-//        System.out.println(sex + name+age+email+password+mobile+address);
+    public String userRegister(String sex,String name,int age,String email,String password,String mobile,String address){
+        System.out.println(sex+name+age+email+password+mobile+address);
+        userInfoService.addUser(sex,name,age,email,password,mobile,address);
         return "成功";
     }
 
