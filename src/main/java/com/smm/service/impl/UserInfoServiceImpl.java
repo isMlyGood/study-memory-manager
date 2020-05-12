@@ -35,7 +35,7 @@ public class UserInfoServiceImpl implements UserInfoService {
      * @param mobile
      * @param address
      */
-    public void addUser(String sex, String name, int age, String email, String password, String mobile, String address) {
+    public int addUser(String sex, String name, int age, String email, String password, String mobile, String address) {
         UserInfo userInfo = new UserInfo();
         userInfo.setSex(sex);
         userInfo.setName(name);
@@ -44,7 +44,8 @@ public class UserInfoServiceImpl implements UserInfoService {
         userInfo.setPassword(password);
         userInfo.setPhone(mobile);
         userInfo.setAddress(address);
-        userInfoMapper.saveUser(userInfo);
+        int logo = userInfoMapper.saveUser(userInfo);
+        return logo;
     }
 
 }

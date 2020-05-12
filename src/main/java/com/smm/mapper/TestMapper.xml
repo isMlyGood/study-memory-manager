@@ -5,7 +5,6 @@
 
 <mapper namespace="com.smm.mapper.TestMapper">
 
-
     <insert id="saveUser" parameterType="Test">
         insert into test(id,test) values(#{id},#{test})
     </insert>

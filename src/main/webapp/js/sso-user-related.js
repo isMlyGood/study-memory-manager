@@ -2,22 +2,19 @@
  * 用户登陆
  */
 function userLogin() {
-
     let username = $('#username').val();
     let password = $('#password').val();
     alert(username + password)
     $.ajax({
-        url: "/user/userRegister",
+        url: "/user/login",
         type:"POST",
-        data:{sex,name,age,email,password,mobile,address},
-        // data:{sex},
-        dataType:"",
+        data:{username,password},
+        dataType:"text",
         success(data){
-            alert(data)
+            window.location.href=data
         }
     })
 }
-
 
 
 /**
@@ -43,15 +40,14 @@ function userRegister() {
     let address = $("#address").val();
     alert(sex + name + age + email + email + password + mobile + address)
     $.ajax({
-        url: "/user/userRegister",
+        url: "/user/register",
         type:"POST",
         data:{sex,name,age,email,password,mobile,address},
         // data:{sex},
-        dataType:"",
+        dataType:"text",
         success(data){
-            alert(data)
+            // alert(data+"userRegister")
+            window.location.href=data
         }
     })
 }
-
-

@@ -10,6 +10,6 @@ public interface UserInfoService {
     /**
      * 注册一个新用户
      */
-    public void addUser(String sex,String name,int age,String email,String password,String mobile,String address);
+    public int addUser(String sex,String name,int age,String email,String password,String mobile,String address);
 
 }

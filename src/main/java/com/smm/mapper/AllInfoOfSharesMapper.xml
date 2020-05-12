@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smm.mapper.AllInfoOfSharesMapper">
+
+    <select id="findAll" resultType="allInfoOfShares">
+        select * from allinfo_of_shares
+    </select>
+
+    <insert id="addAll" parameterType="com.smm.entity.AllInfoOfShares">
+        insert into allinfo_of_shares (gpmc,gpbm,mrj,mcj,mrgs,mcgs,sxf,gplx,jlr,time) values(#{gpmc},#{gpbm},#{mrj},#{mcj},#{mrgs},#{mcgs},#{sxf},#{gplx},#{jlr},#{time})
+    </insert>
+
+</mapper>

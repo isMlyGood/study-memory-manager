@@ -1,7 +1,8 @@
-package com.smm.test;
+package test;
 
 import com.smm.entity.LoginInfo;
 import com.smm.entity.UserInfo;
+import com.smm.mapper.AllInfoOfSharesMapper;
 import com.smm.mapper.LoginInfoMapper;
 import com.smm.mapper.TestMapper;
 import com.smm.mapper.UserInfoMapper;
@@ -23,6 +24,24 @@ public class BaseTest {
     private TestMapper testMapper;
     @Autowired
     private LoginInfoMapper loginInfoMapper;
+    @Autowired
+    private AllInfoOfSharesMapper allInfoOfSharesMapper;
+
+    //测试allInfoOfShares
+    @Test
+    public void allInfoOfSharesTest() throws Exception {
+//        Calendar ca = Calendar.getInstance();
+//        Date time = ca.getTime();
+//        AllInfoOfShares allInfoOfShares = new AllInfoOfShares(10,15,100,100,80,"测试类型",100,time);
+//        //插入所有
+//        int all = allInfoOfSharesMapper.addAll(allInfoOfShares);
+//        System.out.println(all);
+//        //查询所有
+//        List<AllInfoOfShares> all = allInfoOfSharesMapper.findAll();
+//        for (AllInfoOfShares data:all) {
+//            System.out.println(data);
+//        }
+    }
 
     @Test
     public void testSelectByUserNameLoginInfo() throws Exception {

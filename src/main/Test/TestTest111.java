@@ -1,30 +1,30 @@
-//import org.apache.ibatis.io.Resources;
-//import org.junit.Test;
-//import org.springframework.context.support.ClassPathXmlApplicationContext;
-//
-//import javax.sql.DataSource;
-//import java.sql.Connection;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//
-//public class TestTest111 {
-//
-//
-//    /**
-//     * 测试框架
-//     * @throws SQLException
-//     */
-//    @Test
-//    public void Test2() throws SQLException {
-//
-//
-//    }
-//
-//    /**
-//     * spring测试连接
-//     * @throws SQLException
-//     */
+import org.apache.ibatis.io.Resources;
+import org.junit.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class TestTest111 {
+
+
+    /**
+     * 测试框架
+     * @throws SQLException
+     */
+    @Test
+    public void Test2() throws SQLException {
+
+
+    }
+
+    /**
+     * spring测试连接
+     * @throws SQLException
+     */
 //    @Test
 //    public void Test1() throws SQLException {
 //        ClassPathXmlApplicationContext ca = new ClassPathXmlApplicationContext("spring-dao.xml");
@@ -38,4 +38,4 @@
 //            System.out.println(resultSet.getString(1));
 //        }
 //    }
-//}
+}

@@ -14,13 +14,14 @@
     <script src="/js/jquery-3.4.1.js"></script>
     <script src="/js/materialize.min.js"></script>
     <script src="/js/top-skip.js"></script>
+    <script src="/js/sso-user-related.js"></script>
 </head>
 
 <body id="login">
     <div class="container">
         <div class="row tm-register-row tm-mb-35">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-l">
-                <form action="" method="post" class="tm-bg-black p-5 h-100">
+<!--                <form action="" method="post" class="tm-bg-black p-5 h-100">-->
                     <div class="input-field">
                         <input placeholder="输入用户名/邮箱/手机号" id="username" name="username" type="text" class="validate">
                     </div>
@@ -29,20 +30,21 @@
                     </div>
                     <div class="tm-flex-lr">
                         <a href="#" class="white-text small">忘记密码?</a>
-                        <button onclick="login()" type="submit" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0" id="singin">登陆</button>
+<!--                        <button onclick="login()" type="submit" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0" id="singin">登陆</button>-->
+                        <button type="submit" onclick="userLogin()" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0" id="singin">登陆</button>
                     </div>
-                </form>
+<!--                </form>-->
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-r">
                 <header class="font-weight-light tm-bg-black p-5 h-100">
-                    <h3 onclick="" class="mt-0 text-white font-weight-light">登陆</h3>
+                    <h3  onclick="userLogin()" class="mt-0 text-white font-weight-light">登陆</h3>
                     <p>在左侧栏位输入您的用户名和密码，点击登陆即可.</p>
                 </header>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ml-auto mr-0 text-center">
-                <a href="javascript:void (0)" onclick="underSkipRegister()" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">没有用户名密码？</a>
+                <a href="#" onclick="underSkipRegister();" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">没有用户名密码？</a>
             </div>
         </div>
     </div>

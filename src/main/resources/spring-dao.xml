@@ -30,7 +30,7 @@
         <!-- 跟mybatis中<typeAliases>作用一样 -->
 <!--         <property name="typeAliasesPackage" value="com.smm.entity"/> -->
     </bean>
-   <!-- 配置Mapper扫描 -->
+   <!--** 配置Mapper扫描 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 设置Mapper扫描包 -->
         <property name="basePackage" value="com.smm.mapper" />
